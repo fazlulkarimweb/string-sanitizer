@@ -1,0 +1,21 @@
+{
+  "name": "string-sanitizer",
+  "author": "Md Fazlul Karim <fazlulkarimrocky@gmail.com> (https://twitter.com/fazlulkarimweb)",
+  "description": "An intuitive & tiny string sanitizer to remove any special characters or convert strings to create filename or url 🎉🎉",
+  "version": "1.0.0",
+  "main": "node.js",
+  "repository": "github:fazlulkarimweb/string-sanitizer",
+  "license": "MIT",
+  "keywords": [
+    "string sanitizer",
+    "string filename",
+    "remove special characters",
+    "convert string",
+    "sanitize string",
+    "string url",
+    "string converter",
+    "special characters removal",
+    "custom string",
+    "beautiful string"
+  ]
+}
