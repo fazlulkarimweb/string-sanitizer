@@ -54,6 +54,10 @@ string.removeSpace("@abcd efgh"); // @abcdefgh
 
 ![string-sanitizer](https://i.ibb.co/y44bXBb/Screenshot-275.png)
 
+## Typescript compatitibility
+
+Thanks to @kewitz
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
