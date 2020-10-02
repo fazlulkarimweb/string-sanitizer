@@ -47,6 +47,12 @@ console.log(
   `string.sanitize.removeNumber("@abcd efgh123") = `,
   string.sanitize.removeNumber("@abcd efgh123")
 ); // abcdefgh
+
+console.log(
+  `string.sanitize.removeText("@abcd efgh123") = `,
+  string.sanitize.removeText("@abcd efgh123")
+); // 123
+
 console.log(
   `string.sanitize.keepNumber("@abcd efgh123") = `,
   string.sanitize.keepNumber("@abcd efgh123")
