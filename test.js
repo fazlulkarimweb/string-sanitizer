@@ -74,3 +74,8 @@ console.log(
   `string.removeSpace("@abcd efgh") = `,
   string.removeSpace("@abcd efgh")
 ); //  @abcdefgh
+
+console.log(
+  `string.removeUnderscore("@ab__cd ef_gh_") = `,
+  string.removeUnderscore("@ab__cd ef_gh_")
+); //  @abcd efgh
