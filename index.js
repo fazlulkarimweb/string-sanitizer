@@ -57,6 +57,3 @@ exports.addDash = function (str) {
 exports.removeSpace = function (str) {
   return str.replace(/\s+/g, "");
 };
-exports.removeUnderscore = function (str) {
-  return str.replace(/_+/g, "");
-};
