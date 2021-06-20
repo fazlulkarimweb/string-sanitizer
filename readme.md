@@ -2,7 +2,7 @@
 
 An intuitive & tiny string sanitizer to remove any special characters or convert strings to create filename or url 🎉🎉
 
-# Version 2 with no breaking changes
+#### Version 2 with no breaking changes
 2.0.0 is launched with major updates. Pull requests are welcome. Everything is tested. Email, password and username validation is added.
 
 # Use Case
@@ -127,6 +127,8 @@ string.validate.isPassword6to20("password1") // false ( Not matched)
 ## Typescript compatitibility
 
 Thanks to @kewitz for typescript compatibility
+Thanks to @JohannesDev for remove undercore function
+
 
 
 ## Contributing
