@@ -40,8 +40,6 @@ exports.sanitize.keepNumber = function (str) {
   return str.replace(/[^a-zA-Z0-9]/g, '');
 };
 
-// Add Fullstop, Underscore & Dash without sanitizing
-
 exports.addFullstop = function (str) {
   return str.replace(/ /g, '.');
 };
@@ -72,7 +70,6 @@ exports.validate = function (str) {
 //Username & Email
 exports.validate.isEmail = function (str) {
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  // return regex.test(str);
   if (regex.test(str)) {
     return str;
   } else {
@@ -82,7 +79,6 @@ exports.validate.isEmail = function (str) {
 
 exports.validate.isUsername = function (str) {
   const regex = /^[a-z][a-z]+\d*$|^[a-z]\d{2,}$/i;
-  // return regex.test(str);
   if (regex.test(str)) {
     return str.toLowerCase();
   } else {
@@ -90,12 +86,9 @@ exports.validate.isUsername = function (str) {
   }
 };
 
-// Password Validation
-
 // To check a password between 6 to 15 characters which contain at least one numeric digit and a special character
 exports.validate.isPassword6to15 = function (str) {
   const regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,15}$/;
-  // return regex.test(str);
   if (regex.test(str)) {
     return str;
   } else {
@@ -106,7 +99,6 @@ exports.validate.isPassword6to15 = function (str) {
 // 7 to 20 characters which contain only characters, numeric digits, underscore and first character must be a letter
 exports.validate.isPassword7to20 = function (str) {
   const regex = /^[A-Za-z]\w{7,20}$/;
-  // return regex.test(str);
   if (regex.test(str)) {
     return str;
   } else {
@@ -117,7 +109,6 @@ exports.validate.isPassword7to20 = function (str) {
 // 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter
 exports.validate.isPassword6to20 = function (str) {
   const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
-  // return regex.test(str);
   if (regex.test(str)) {
     return str;
   } else {
@@ -129,7 +120,6 @@ exports.validate.isPassword6to20 = function (str) {
 exports.validate.isPassword8to15 = function (str) {
   const regex =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-  // return regex.test(str);
   if (regex.test(str)) {
     return str;
   } else {

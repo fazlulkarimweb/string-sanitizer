@@ -1,13 +1,13 @@
 # String Sanitizer 
 
-An intuitive & tiny string sanitizer to remove any special characters or convert strings to create filename or url 🎉🎉
+An intuitive & tiny string sanitizer to remove any special characters or convert strings to create filename or url. Validate email, password & username too. 🎉🎉
 
-#### Version 2 with no breaking changes
-2.0.0 is launched with major updates. Pull requests are welcome. Everything is tested. Email, password and username validation is added.
 
-# Use Case
+> **✅ Update:** 2.0.0 is launched with major updates. No breaking changes. Email, password and username validation is added. Everything is tested.
 
-Converting or sanitizing string is easier than ever with the help of this package. You can use this utility package to sanitize even foreign languages other than English. Under the hood, regex is heavily used in this library. You can convert your string to url or filename frindly string.
+## Use Case
+
+Converting or sanitizing string is easier than ever with the help of this package. You can use this utility package to sanitize even foreign languages other than English. Under the hood, regex is heavily used in this library. You can convert your string to url or filename frindly string. Besides you can validate email, passwords and username too.
 🎉🎉
 
 ## Installation
@@ -34,7 +34,7 @@ let someString = "@abcde$f$gh";
 string.sanitize(someString); // abcdefgh
 ```
 
-# Sanitization Use Cases
+## Sanitization use cases
 
 ```js
 var string = require("string-sanitizer");
@@ -54,16 +54,17 @@ string.removeSpace("@abcd efgh"); // @abcdefgh
 string.removeUnderscore("@ab__cd ef_gh_"); // @abcd efgh
 ```
 
-## Santization Use Case
+**✅ Screenshot**
 
 ![string-sanitizer](https://i.ibb.co/y44bXBb/Screenshot-275.png)
 
-## Validation (Added in version 2.00)
-Most of the time we have to validate email, password and username in our codebase. So string sanitizer starts offering validation. You pass your user generated email, username or password in this method. If it passed the checking, it will return the string as it is. If it doesn't pass the filtering, it will return false.
+# Validation 👀👀👀
+**Added in version 2.0.0**
 
- if you pass your email, username or password.
+Most of the time we have to validate email, password and username in our codebase. So string sanitizer starts offering validation along with sanitization. You pass your user generated email, username or password in this method. If it passes the filter, it will return the string as it is. If it doesn't pass the filter, it will return false.
 
-### Email Validation
+
+## Email Validation ✅
 
 ```js
 var string = require("string-sanitizer");
@@ -74,7 +75,8 @@ string.validate.isEmail("jhon@gmailcom") // false
 string.validate.isEmail("jhon@@gmail.com") // false
 ```
 
-### Username Validation
+## Username Validation ✅
+
 Username must be free from any special characters. There will be no space and must be at least 2 characters long. Combination of numbers and letters is acceptable. Only numbers (i.e 123) are not acceptable. But only letters (i.e ea) wil be acceptable. 
 
 ```js
@@ -94,49 +96,58 @@ Because some of the username like (@ea) is still most popular.
 Why automatically lowerstring applied?
 Because, most of the end user still don't understand the meaning of username. Sometimes they use upper letter. We just sanitized it. Nothing more.
 
-### Password Validation
+## Password Validation ✅
 
-#### To check a password between 6 to 15 characters which contain at least one numeric digit and a special character (Most popular)
+> **1. Most popular:** To check a password **between 6 to 15 characters** which contain at least one numeric digit and a special character
+
 
 ```js
 string.validate.isPassword6to15("password1@") //  password1@
-string.validate.isPassword6to15("password1") //  No special character
+string.validate.isPassword6to15("password1") //  false
 ```
+<br/>
 
-#### To check a password between 8 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character (Most Secure)
+> **2. Most Secure:** To check a password **between 8 to 15 characters** which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character
 
 ```js
 string.validate.isPassword8to15("password1Aa_"); //  password1Aa_
-string.validate.isPassword8to15("password1") // false ( Not matched)
+string.validate.isPassword8to15("password1") // false
 ```
+<br/>
 
-#### To check a password between 7 to 20 characters which contain only characters, numeric digits, underscore and first character must be a letter. No special character accepted here. (Simple password)
 
-```js
-string.validate.isPassword7to20("password1@_") //  false (Because special character)
-string.validate.isPassword7to20("password1") //  password1
-```
+> **3. Simpler Password:** To check a password **between 6 to 20 characters** which contain at least one numeric digit, one uppercase and one lowercase letter
 
-#### To check a password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter
 
 ```js
 string.validate.isPassword6to20("password1Aa"); //  password1Aa
-string.validate.isPassword6to20("password1") // false ( Not matched)
+string.validate.isPassword6to20("password1") // false
 ```
+<br/>
 
-## Typescript compatitibility
+> **4. Easy Password:** To check a password **between 7 to 20 characters** which contain only characters, numeric digits, underscore and first character must be a letter. No special character accepted here.
+> 
+
+
+```js
+string.validate.isPassword7to20("password1") //  password1
+string.validate.isPassword7to20("password1@_") //  false (No special character allowed)
+```
+<br/>
+
+### Typescript compatitibility
 
 Thanks to @kewitz for typescript compatibility
-Thanks to @JohannesDev for remove undercore function
+
+Thanks to @JohannesDev for removeUnderscore function
 
 
-
-## Contributing
+### Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate. 🏃‍🏃‍
 
-## License
+### License
 
 [MIT](https://github.com/fazlulkarimweb/string-sanitizer/blob/master/license)
