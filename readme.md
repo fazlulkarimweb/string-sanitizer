@@ -135,6 +135,13 @@ string.validate.isPassword7to20("password1@_") //  false (No special character a
 ```
 <br/>
 
+## ES6 Module compatible import
+
+```js
+import {exports as string} from "/path/to/string-sanitizer/index.esm.js";
+//use as normal with any of the above examples
+```
+
 ### Typescript compatitibility
 
 Thanks to @kewitz for typescript compatibility
@@ -147,6 +154,7 @@ Thanks to @JohannesDev for removeUnderscore function
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate. 🏃‍🏃‍
+
 
 ### License
 
