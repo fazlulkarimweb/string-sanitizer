@@ -3,7 +3,8 @@
   "author": "Md Fazlul Karim <fazlulkarimrocky@gmail.com> (https://twitter.com/fazlulkarimweb)",
   "description": "An intuitive & tiny string sanitizer to remove any special characters or convert strings to create filename or url 🎉🎉",
   "version": "2.0.1",
-  "main": "index.js",
+   "main": "./index.js",
+  "types": "./index.d.ts",
   "repository": "github:fazlulkarimweb/string-sanitizer",
   "license": "MIT",
   "keywords": [
