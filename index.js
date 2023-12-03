@@ -69,7 +69,7 @@ exports.validate = function (str) {
 
 //Username & Email
 exports.validate.isEmail = function (str) {
-  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(?:\.\w{2,})+$/;
   if (regex.test(str)) {
     return str;
   } else {
